@@ -1,0 +1,5 @@
+# ingore random_data.txt file
+random_data.txt
+
+# ignore pycache folder
+__pycache__/
