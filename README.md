@@ -5,6 +5,7 @@ Works on Chrome, Microsoft Edge and Firefox. Not sure if it works on Safari beca
 
 # Installation
 Requirements - Python3, virtual environment NGINX/Apache webserver.
+
 Example:
 
 1. Create a virtual environment in /var/www/html
@@ -72,4 +73,3 @@ http://< server ip-address>/set_filesize/<size>/
 ```
 
 where size is between 10 (10MB) and 1000 (1GB).
-
