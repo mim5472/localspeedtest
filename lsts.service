@@ -1,12 +1,12 @@
 [Unit]
-Description=Local Speed Test Server
+Description=Simple Local Speed Test Server
 After=network.target
 
 [Service]
 User=www-data
 Group=www-data
 WorkingDirectory=/var/www/html/lsts/localspeedtest-master
-ExecStart=/var/www/html/lsts/bin/python3 /var/www/html/lsts/localspeedtest-master/app.py
+ExecStart=/var/www/html/lsts/bin/python3 /var/www/html/lsts/localspeedtest-master/speed_test.py
 RestartSec=5
 Restart=always
 
