@@ -1,6 +1,6 @@
 # Local Speed Test Server
-A simple speed test server using Python-flash/HTML/Javascript. 
-Test bandwidth within your internal network via HTTP/HTTPs. Works on Mobile and Desktop. 
+A simple speed test server using Python-flask/HTML/Javascript. 
+Test bandwidth within your internal network via HTTP(s). Works on Mobile and Desktop. 
 Works on Chrome, Microsoft Edge and Firefox. Not sure if it works on Safari because I don't have a Macbook/iphone.
 
 
