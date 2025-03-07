@@ -8,6 +8,8 @@ app = Flask(__name__)
 basedir = os.path.dirname(__file__)
 static_dir = os.path.join(basedir, 'static/')
 
+app.config['SECRET_KEY'] = 'yoursecretkey'
+
 @app.before_request
 def before_app_start():
     create_file()
