@@ -18,7 +18,7 @@ sudo python3 -m venv lsts
 5. Copy the lsts.service to /etc/systemd/system
 ```
 cd /var/log/html/lsts/<app-directory>
-sudo cp
+sudo cp lsts.service /etc/systemd/system/
 ```
 6. Reload systemd
 ```
