@@ -3,10 +3,11 @@ A simple speed test server using Python-flash/HTML/Javascript.
 Test bandwidth within your internal network via HTTP/HTTPs. Works on Mobile and Desktop. 
 Works on Chrome, Microsoft Edge and Firefox. Not sure if it works on Safari because I don't have a Macbook/iphone.
 
-# Installation
-Requirements - Python3, virtual environment NGINX/Apache webserver.
 
-Example:
+# Installation
+Requirements - Python3, virtual environment, NGINX webserver.
+
+Example - Installation on a fresh Ubuntu 24 server:
 
 1. Create a virtual environment in /var/www/html
 ```
@@ -73,3 +74,6 @@ http://< server ip-address>/set_filesize/<size>/
 ```
 
 where size is between 10 (10MB) and 1000 (1GB).
+
+# Screenshot
+![Local Speed Test](static/lsts_sample.jpg)
