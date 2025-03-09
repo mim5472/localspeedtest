@@ -17,7 +17,7 @@ function download_speed() {
     end_time = new Date();
     time_diff = (end_time.getTime() - start_time.getTime()) / 1000;
     dn_speed = (e.loaded * 8) / time_diff;
-    dn_kbps = (Math.round(dn_speed / (1024 * 1024))).toLocaleString();
+    dn_kbps = (Math.round(dn_speed / (1000000))).toLocaleString();
     document.getElementById("dn-time").innerHTML = time_diff + ' seconds';
     document.getElementById("dn-speed").innerHTML = dn_kbps + ' Mbps';
     btn_start_dn.disabled = true;
@@ -25,7 +25,7 @@ function download_speed() {
   xhttp.onloadend = function() {
     btn_start_dn.disabled = true;
     document.getElementById("message").innerHTML = "Starting upload speed test";
-    setTimeout(upload_speed, 3000);
+    setTimeout(upload_speed, 2000);
   };
   xhttp.open("GET", "/download/random_data.txt");
   xhttp.send();
@@ -45,7 +45,7 @@ function upload_speed() {
     end_time = new Date();
     time_diff = (end_time.getTime() - start_time.getTime()) / 1000;
     up_speed = (e.loaded * 8) / time_diff;
-    up_kbps = (Math.round(up_speed / (1024 * 1024))).toLocaleString();
+    up_kbps = (Math.round(up_speed / (1000000))).toLocaleString();
     document.getElementById("up-time").innerHTML = time_diff + ' seconds';
     document.getElementById("up-speed").innerHTML = up_kbps + ' Mbps';
   };
@@ -62,7 +62,7 @@ function reset_speedtest() {
 };
 function run_speedtest() {
   document.getElementById("result").classList.remove("d-none");
-  setTimeout(download_speed, 3000);
+  setTimeout(download_speed, 2000);
   document.getElementById("message").innerHTML = "Starting download speed test";
 };
 
