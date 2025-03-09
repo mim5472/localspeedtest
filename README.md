@@ -75,5 +75,8 @@ http://< server ip-address>/set_filesize/<size>/
 
 where size is between 10 (10MB) and 1000 (1GB).
 
+# Support
+[Buy me a coffee](https://buymeacoffee.com/nglusercom)
+
 # Screenshot
 ![Local Speed Test](static/lsts_sample.jpg)

@@ -25,7 +25,7 @@ function download_speed() {
   xhttp.onloadend = function() {
     btn_start_dn.disabled = true;
     document.getElementById("message").innerHTML = "Starting upload speed test";
-    setTimeout(upload_speed, 2000);
+    setTimeout(upload_speed, 3000);
   };
   xhttp.open("GET", "/download/random_data.txt");
   xhttp.send();
@@ -62,7 +62,7 @@ function reset_speedtest() {
 };
 function run_speedtest() {
   document.getElementById("result").classList.remove("d-none");
-  setTimeout(download_speed, 2000);
+  setTimeout(download_speed, 3000);
   document.getElementById("message").innerHTML = "Starting download speed test";
 };
 
