@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=www-data
 Group=www-data
-WorkingDirectory=/var/www/html/lsts/localspeedtest-master
-ExecStart=/var/www/html/lsts/bin/python3 /var/www/html/lsts/localspeedtest-master/speed_test.py
+WorkingDirectory=/var/www/html/lsts/localspeedtest
+ExecStart=/var/www/html/lsts/bin/python3 /var/www/html/lsts/localspeedtest/speed_test.py
 RestartSec=5
 Restart=always
 

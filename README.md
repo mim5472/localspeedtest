@@ -22,7 +22,7 @@ sudo unzip localspeedtest-master.zip
 3. Install requirements.
 ```
 cd /var/www/html/lsts/bin
-sudo ./pip3 install -r ../localspeedtest-master/requirements.txt
+sudo ./pip3 install -r ../<application directory>/requirements.txt
 
 cd /var/www/html/
 sudo chown -R www-data:www-data lsts/
