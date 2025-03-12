@@ -1,5 +1,4 @@
 let btn_start_dn = document.getElementById("btn_start_dn");
-let btn_start_re = document.getElementById("btn_start_re");
 
 function download_speed() {
   let xhttp = new XMLHttpRequest;
@@ -11,6 +10,7 @@ function download_speed() {
     };
   };
   xhttp.onloadstart = function () {
+    btn_start_dn.classList.add("d-none");
     start_time = new Date();
   };
   xhttp.onprogress = function(e) {
@@ -20,10 +20,8 @@ function download_speed() {
     dn_kbps = (Math.round(dn_speed / (1000000))).toLocaleString();
     document.getElementById("dn-time").innerHTML = time_diff + ' seconds';
     document.getElementById("dn-speed").innerHTML = dn_kbps + ' Mbps';
-    btn_start_dn.disabled = true;
   };
   xhttp.onloadend = function() {
-    btn_start_dn.disabled = true;
     document.getElementById("message").innerHTML = "Starting upload speed test";
     setTimeout(upload_speed, 3000);
   };
@@ -50,16 +48,15 @@ function upload_speed() {
     document.getElementById("up-speed").innerHTML = up_kbps + ' Mbps';
   };
   xhttp.upload.onloadend = function() {
-    btn_start_re.disabled = false;
+    document.getElementById("hidden_data").innerHTML = "";
+    btn_start_dn.innerHTML = "Restart Speed Test";
+    btn_start_dn.classList.remove("d-none");
   };
   xhttp.open("POST", "/upload/");
   xhttp.send(form_data);
 };
 
-function reset_speedtest() {
-    btn_start_re.disabled = true;
-    location.reload();
-};
+
 function run_speedtest() {
   document.getElementById("result").classList.remove("d-none");
   setTimeout(download_speed, 3000);
@@ -67,4 +64,3 @@ function run_speedtest() {
 };
 
 btn_start_dn.addEventListener("click", run_speedtest);
-btn_start_re.addEventListener("click", reset_speedtest);
