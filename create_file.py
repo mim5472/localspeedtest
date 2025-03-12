@@ -3,7 +3,7 @@ import os
 basedir = os.path.dirname(__file__)
 static_dir = os.path.join(basedir, 'static/')
 
-def create_file(file_size=75):
+def create_file(file_size=100):
     if os.path.isfile(os.path.join(static_dir, 'random_data.txt')):
         pass
     else:
